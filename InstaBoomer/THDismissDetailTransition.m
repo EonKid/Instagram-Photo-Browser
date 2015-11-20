@@ -2,7 +2,7 @@
 //  THDismissDetailTransition.m
 //  InstaBoomer
 //
-//  Created by Aseem 1 on 19/11/15.
+//  Created by Dhruv on 19/11/15.
 //  Copyright (c) 2015 codeBrew. All rights reserved.
 //
 

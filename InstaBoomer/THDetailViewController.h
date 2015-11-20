@@ -2,7 +2,7 @@
 //  THDetailViewController.h
 //  InstaBoomer
 //
-//  Created by Aseem 1 on 20/10/15.
+//  Created by Dhruv on 20/10/15.
 //  Copyright (c) 2015 codeBrew. All rights reserved.
 //
 
