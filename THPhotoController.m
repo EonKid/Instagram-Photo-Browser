@@ -36,7 +36,7 @@
     NSURLSessionDownloadTask *task = [session downloadTaskWithRequest:request completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
         
         NSData *data = [NSData dataWithContentsOfURL:url];
-        NSLog(@"%@",data);
+        //NSLog(@"%@",data);
         UIImage *image = [[UIImage alloc] initWithData:data];
         [[SAMCache sharedCache] setImage:image forKey:key];
         dispatch_async(dispatch_get_main_queue(), ^{

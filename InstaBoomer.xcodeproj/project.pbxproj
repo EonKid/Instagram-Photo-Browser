@@ -18,6 +18,7 @@
 		A66A21B91BD65876001A8AA7 /* THPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = A66A21B81BD65876001A8AA7 /* THPhotoController.m */; };
 		A6889C9D1BC676BD00C99750 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6889C9C1BC676BD00C99750 /* Default-568h@2x.png */; };
 		A6889CA61BC67FC700C99750 /* THPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6889CA51BC67FC700C99750 /* THPhotoCell.m */; };
+		A6DA5B391BFDF865008ECE40 /* THDismissDetailTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DA5B381BFDF865008ECE40 /* THDismissDetailTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		A6889CA41BC67FC700C99750 /* THPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THPhotoCell.h; sourceTree = "<group>"; };
 		A6889CA51BC67FC700C99750 /* THPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THPhotoCell.m; sourceTree = "<group>"; };
 		A6CE77FF1BD275E4008E9CE1 /* PodFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = PodFile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A6DA5B371BFDF865008ECE40 /* THDismissDetailTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THDismissDetailTransition.h; sourceTree = "<group>"; };
+		A6DA5B381BFDF865008ECE40 /* THDismissDetailTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THDismissDetailTransition.m; sourceTree = "<group>"; };
 		CB7CB1EE36C6FD8E1BB978EF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F8CACD63CAB8699BC500E63D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -123,6 +126,8 @@
 				A66A21B81BD65876001A8AA7 /* THPhotoController.m */,
 				A667261F1BD670A600B0172E /* THDetailViewController.h */,
 				A66726201BD670A600B0172E /* THDetailViewController.m */,
+				A6DA5B371BFDF865008ECE40 /* THDismissDetailTransition.h */,
+				A6DA5B381BFDF865008ECE40 /* THDismissDetailTransition.m */,
 			);
 			path = InstaBoomer;
 			sourceTree = "<group>";
@@ -316,6 +321,7 @@
 				A60E03A81BC651490030EBA5 /* THPhotosViewController.m in Sources */,
 				A6889CA61BC67FC700C99750 /* THPhotoCell.m in Sources */,
 				A63F9F4B1BF21029005FE61B /* THPresentDetailTransition.m in Sources */,
+				A6DA5B391BFDF865008ECE40 /* THDismissDetailTransition.m in Sources */,
 				A66A21B91BD65876001A8AA7 /* THPhotoController.m in Sources */,
 				A60E03831BC64D5D0030EBA5 /* main.m in Sources */,
 				A66726211BD670A600B0172E /* THDetailViewController.m in Sources */,

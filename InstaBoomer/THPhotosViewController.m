@@ -10,9 +10,11 @@
 #import "THPhotoCell.h"
 #import <SimpleAuth/SimpleAuth.h>
 #import "THDetailViewController.h"
+#import "THPresentDetailTransition.h"
+#import "THDismissDetailTransition.h"
 
 
-@interface THPhotosViewController ()
+@interface THPhotosViewController ()<UIViewControllerTransitioningDelegate>
 
 @property (nonatomic) NSString  *accessToken;
 @property (nonatomic) NSArray *photos;
@@ -48,7 +50,7 @@
 //        NSLog(@"%@",text);
 //        
 //    }];
-//    [task resume];
+//    [task resume];chanakyasixnine
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     self.accessToken = [userDefaults objectForKey:@"accessToken"];
@@ -57,6 +59,7 @@
         
         [SimpleAuth authorize:@"instagram" options:@{@"scope":@[@"likes"]}
                completion:^(NSDictionary *responseObject, NSError *error) {
+                   NSLog(@"%@",responseObject);
         
         self.accessToken = responseObject[@"credentials"][@"token"];
         //NSLog(@"%@",self.accessToken);
@@ -89,13 +92,13 @@
         
         NSData *data = [[NSData alloc] initWithContentsOfURL:location];
         NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-        NSLog(@"%@",responseDictionary);
+       // NSLog(@"%@",responseDictionary);
         // Key Value Coding
         //            NSArray *photos = [responseDictionary valueForKeyPath:@"data.images.standard_resolution.url"];
         //            NSLog(@"My Photos:\n%@",photos);
       
         self.photos = [responseDictionary valueForKeyPath:@"data"];
-       // NSLog(@"My Photos:\n%@",self.photos);
+      //  NSLog(@"My Photos:\n%@",self.photos);
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.collectionView reloadData];
@@ -125,8 +128,21 @@
 
     NSDictionary *photo = self.photos[indexPath.row];
     THDetailViewController *viewController = [[THDetailViewController alloc] init];
+    viewController.modalPresentationStyle = UIModalPresentationCustom;
+    viewController.transitioningDelegate = self;
+    
     viewController.photo = photo;
     [self presentViewController:viewController animated:YES completion:nil];
+}
+
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
+
+    return [[THPresentDetailTransition alloc] init];
+}
+
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
+
+    return [[THDismissDetailTransition alloc] init];
 }
 
 @end
